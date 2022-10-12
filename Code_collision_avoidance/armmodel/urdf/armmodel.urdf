@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="armmodel">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="6.6181E-05 -0.00015161 -0.19249"
+        rpy="0 0 0" />
+      <mass
+        value="1.2116" />
+      <inertia
+        ixx="0.0019567"
+        ixy="3.2695E-06"
+        ixz="-6.4571E-07"
+        iyy="0.0019617"
+        iyz="-1.5111E-06"
+        izz="0.0030011" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/base_link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/base_link.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="7.2718E-05 -0.029092 -0.030082"
+        rpy="0 0 0" />
+      <mass
+        value="1.3993" />
+      <inertia
+        ixx="0.0039418"
+        ixy="-1.3252E-07"
+        ixz="1.2424E-06"
+        iyy="0.0042042"
+        iyz="0.0010239"
+        izz="0.0027112" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link1.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link1.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armjoint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.967"
+      upper="2.967"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="3.216E-05 0.11921 -0.01045"
+        rpy="0 0 0" />
+      <mass
+        value="1.4639" />
+      <inertia
+        ixx="0.0063672"
+        ixy="-4.7491E-07"
+        ixz="7.5063E-07"
+        iyy="0.0026746"
+        iyz="-0.00050689"
+        izz="0.0069259" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link2.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link2.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armjoint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.094"
+      upper="2.094"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.019368 -0.020584 -0.051775"
+        rpy="0 0 0" />
+      <mass
+        value="1.1787" />
+      <inertia
+        ixx="0.005941"
+        ixy="7.5907E-05"
+        ixz="-0.00070134"
+        iyy="0.0064945"
+        iyz="0.00076789"
+        izz="0.0019242" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link3.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link3.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armjoint3"
+    type="revolute">
+    <origin
+      xyz="0 0.4495 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.967"
+      upper="2.967"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="-0.023047 0.13103 -0.017911"
+        rpy="0 0 0" />
+      <mass
+        value="0.94956" />
+      <inertia
+        ixx="0.0051402"
+        ixy="0.00052455"
+        ixz="9.256E-05"
+        iyy="0.0014794"
+        iyz="-0.00088944"
+        izz="0.0053194" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link4.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link4.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armjoint4"
+    type="revolute">
+    <origin
+      xyz="0.03 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.792"
+      upper="2.094"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="1.8693E-05 -0.041402 -0.10398"
+        rpy="0 0 0" />
+      <mass
+        value="0.3347" />
+      <inertia
+        ixx="0.0018739"
+        ixy="-4.1119E-08"
+        ixz="1.694E-07"
+        iyy="0.0016304"
+        iyz="0.00057017"
+        izz="0.00062971" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link5.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link5.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armjoint5"
+    type="revolute">
+    <origin
+      xyz="-0.03 0.4495 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.967"
+      upper="2.967"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="0.00031073 0.011805 -0.00086368"
+        rpy="0 0 0" />
+      <mass
+        value="0.94596" />
+      <inertia
+        ixx="0.0010467"
+        ixy="4.7917E-06"
+        ixz="-8.4956E-06"
+        iyy="0.00080867"
+        iyz="5.2641E-05"
+        izz="0.0008319" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link6.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link6.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armjoint6"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.181"
+      upper="2.181"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link7">
+    <inertial>
+      <origin
+        xyz="-0.083613 3.7165E-05 0.03637"
+        rpy="0 0 0" />
+      <mass
+        value="0.18598" />
+      <inertia
+        ixx="0.00023579"
+        ixy="-4.8742E-08"
+        ixz="-0.00012561"
+        iyy="0.00035441"
+        iyz="-2.3106E-07"
+        izz="0.00021991" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="3.1416 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link7.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://armmodel/meshes/link7.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armjoint7"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="link6" />
+    <child
+      link="link7" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.967"
+      upper="2.967"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
